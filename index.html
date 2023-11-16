@@ -83,7 +83,7 @@
 
                             const correspondingValues2 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
 
-                            audioSlider1.addEventListener("input", () => {
+                            audioSlider2.addEventListener("input", () => {
                                 const selectedSample2 = parseInt(audioSlider2.value);
                                 correspondingValue2.textContent = correspondingValues2[selectedSample2 - 1]; // Adjust index
                                 const audioFileName2 = `./audio/male_to_female_83/wav_files/alpha${correspondingValues2[selectedSample2 - 1]}.wav`;
