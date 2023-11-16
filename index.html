@@ -115,8 +115,7 @@
                         <p>&lambda; = <span id="correspondingValue3">0</span></p>
 
                         <audio id="audioPlayer3" controls>
-                            <source id="audioSource3" src="./audio/hoarse_11/wav_files/alpha0.wav"
-                                type="audio/mpeg">
+                            <source id="audioSource3" src="./audio/hoarse_11/wav_files/alpha0.wav" type="audio/mpeg">
                         </audio>
 
                         <script>
@@ -127,7 +126,7 @@
 
                             const correspondingValues3 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
 
-                            audioSlider3addEventListener("input", () => {
+                            audioSlider3.addEventListener("input", () => {
                                 const selectedSample3 = parseInt(audioSlider3.value);
                                 correspondingValue3.textContent = correspondingValues3[selectedSample3 - 1]; // Adjust index
                                 const audioFileName3 = `./audio/hoarse_11/wav_files/alpha${correspondingValues3[selectedSample3 - 1]}.wav`;
@@ -143,8 +142,7 @@
                         <p>&lambda; = <span id="correspondingValue4">0</span></p>
 
                         <audio id="audioPlayer4" controls>
-                            <source id="audioSource4" src="./audio/hoarse_0/wav_files/alpha0.wav"
-                                type="audio/mpeg">
+                            <source id="audioSource4" src="./audio/hoarse_0/wav_files/alpha0.wav" type="audio/mpeg">
                         </audio>
 
                         <script>
@@ -158,7 +156,7 @@
                             audioSlider4.addEventListener("input", () => {
                                 const selectedSample4 = parseInt(audioSlider4.value);
                                 correspondingValue4.textContent = correspondingValues4[selectedSample4 - 1]; // Adjust index
-                                const audioFileName4 = `./audio/male_to_female_83/wav_files/alpha${correspondingValues4[selectedSample4 - 1]}.wav`;
+                                const audioFileName4 = `./audio/hoarse_0/wav_files/alpha${correspondingValues4[selectedSample4 - 1]}.wav`;
                                 audioSource4.src = audioFileName4;
                                 audioPlayer4.load();
                                 audioPlayer4.play();
