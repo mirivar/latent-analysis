@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     <title>Title</title>
 </head>
 
@@ -33,11 +33,18 @@
         <h2>Latent space arithmetics:</h2>
         <h3>Male-to-female:</h3>
         <table class="table table-responsive">
+            <thead>
+                <tr class="vertical edge text-center">
+                    <td>Original gender: Female</td>
+                    <td>Original gender: Male</td>
+
+
+            </thead>
             <tbody>
 
                 <tr class="pure-table-odd">
 
-                    <td class="text-center">
+                    <td class="vertical edge text-center">
                         <input type="range" id="audioSlider1" name="audioSlider1" min="1" max="7" value="4">
 
                         <p>&lambda; = <span id="correspondingValue1">0</span></p>
@@ -65,7 +72,7 @@
                             });
                         </script>
                     </td>
-                    <td class="text-center">
+                    <td class="vertical edge text-center">
                         <input type="range" id="audioSlider2" name="audioSlider2" min="1" max="7" value="4">
 
                         <p>&lambda; = <span id="correspondingValue2">0</span></p>
@@ -97,9 +104,68 @@
             </tbody>
         </table>
 
-        <h3>Speech cleaning:</h3>
+        <h3>Speech cleaning (*** tmp name***):</h3>
         <table class="table table-responsive">
             <tbody>
+                <tr class="pure-table-odd">
+
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider3" name="audioSlider3" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue3">0</span></p>
+
+                        <audio id="audioPlayer3" controls>
+                            <source id="audioSource3" src="./audio/hoarse_11/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider3 = document.getElementById("audioSlider3");
+                            const correspondingValue3 = document.getElementById("correspondingValue3");
+                            const audioPlayer3 = document.getElementById("audioPlayer3");
+                            const audioSource3 = document.getElementById("audioSource3");
+
+                            const correspondingValues3 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+
+                            audioSlider3addEventListener("input", () => {
+                                const selectedSample3 = parseInt(audioSlider3.value);
+                                correspondingValue3.textContent = correspondingValues3[selectedSample3 - 1]; // Adjust index
+                                const audioFileName3 = `./audio/hoarse_11/wav_files/alpha${correspondingValues3[selectedSample3 - 1]}.wav`;
+                                audioSource3.src = audioFileName3;
+                                audioPlayer3.load();
+                                audioPlayer3.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider4" name="audioSlider4" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue4">0</span></p>
+
+                        <audio id="audioPlayer4" controls>
+                            <source id="audioSource4" src="./audio/hoarse_0/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider4 = document.getElementById("audioSlider4");
+                            const correspondingValue4 = document.getElementById("correspondingValue4");
+                            const audioPlayer4 = document.getElementById("audioPlayer4");
+                            const audioSource4 = document.getElementById("audioSource4");
+
+                            const correspondingValues4 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+
+                            audioSlider4.addEventListener("input", () => {
+                                const selectedSample4 = parseInt(audioSlider4.value);
+                                correspondingValue4.textContent = correspondingValues4[selectedSample4 - 1]; // Adjust index
+                                const audioFileName4 = `./audio/male_to_female_83/wav_files/alpha${correspondingValues4[selectedSample4 - 1]}.wav`;
+                                audioSource4.src = audioFileName4;
+                                audioPlayer4.load();
+                                audioPlayer4.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
             </tbody>
         </table>
 
