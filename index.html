@@ -22,7 +22,7 @@
     <br>
     <div class="container">
         <span>
-            <h2>Abstract:</h2>
+            <h2>Abstract</h2>
             <center><img src="arch.png" style="width:75%"></center>
             <br>
             ### Our Abstract ###
@@ -30,13 +30,13 @@
     </div>
 
     <div class="container" id="abstractdiv">
-        <h2>Latent space arithmetics:</h2>
-        <h3>Male-to-female:</h3>
+        <h2>Latent space arithmetics</h2>
+        <h3>Male-to-female</h3>
         <table class="table table-responsive">
             <thead>
                 <tr class="vertical edge text-center">
-                    <td>Original gender: Female</td>
-                    <td>Original gender: Male</td>
+                    <td>Source gender: Female</td>
+                    <td>Source gender: Male</td>
 
 
             </thead>
@@ -104,7 +104,7 @@
             </tbody>
         </table>
 
-        <h3>Speech cleaning (*** tmp name***):</h3>
+        <h3>Speech enhancement</h3>
         <table class="table table-responsive">
             <tbody>
                 <tr class="pure-table-odd">
@@ -151,7 +151,7 @@
                             const audioPlayer4 = document.getElementById("audioPlayer4");
                             const audioSource4 = document.getElementById("audioSource4");
 
-                            const correspondingValues4 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+                            const correspondingValues4 = ["-2", "-1", "-0.5", "0", "0.5", "1", "1.5"];
 
                             audioSlider4.addEventListener("input", () => {
                                 const selectedSample4 = parseInt(audioSlider4.value);
@@ -170,15 +170,89 @@
     </div>
 
     <div class="container" id="abstractdiv">
-        <h2>Speaker embedding space arithmetics:</h2>
+        <h2>Speaker embedding space arithmetics</h2>
         <h3>Male-to-female:</h3>
+
+        <table class="table table-responsive">
+            <thead>
+                <tr class="vertical edge text-center">
+                    <td>Source gender: Female</td>
+                    <td>Source gender: Male</td>
+
+
+            </thead>
+            <tbody>
+
+                <tr class="pure-table-odd">
+
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider5" name="audioSlider5" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue5">0</span></p>
+
+                        <audio id="audioPlayer5" controls>
+                            <source id="audioSource5"
+                                src="./audio/speaker_embeddings/male_to_female_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider5 = document.getElementById("audioSlider5");
+                            const correspondingValue5 = document.getElementById("correspondingValue5");
+                            const audioPlayer5 = document.getElementById("audioPlayer5");
+                            const audioSource5 = document.getElementById("audioSource5");
+
+                            const correspondingValues5 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+
+                            audioSlider5.addEventListener("input", () => {
+                                const selectedSample5 = parseInt(audioSlider5.value);
+                                correspondingValue5.textContent = correspondingValues5[selectedSample5 - 1]; // Adjust index
+                                const audioFileName5 = `./audio/speaker_embeddings/male_to_female_43/wav_files/alpha${correspondingValues5[selectedSample5 - 1]}.wav`;
+                                audioSource5.src = audioFileName5;
+                                audioPlayer5.load();
+                                audioPlayer5.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider6" name="audioSlider6" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue6">0</span></p>
+
+                        <audio id="audioPlayer6" controls>
+                            <source id="audioSource6"
+                                src="./audio/speaker_embeddings/male_to_female_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider6 = document.getElementById("audioSlider6");
+                            const correspondingValue6 = document.getElementById("correspondingValue6");
+                            const audioPlayer6 = document.getElementById("audioPlayer6");
+                            const audioSource6 = document.getElementById("audioSource6");
+
+                            const correspondingValues6 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+
+                            audioSlider6.addEventListener("input", () => {
+                                const selectedSample6 = parseInt(audioSlider6.value);
+                                correspondingValue6.textContent = correspondingValues6[selectedSample6 - 1]; // Adjust index
+                                const audioFileName6 = `./audio/speaker_embeddings/male_to_female_83/wav_files/alpha${correspondingValues6[selectedSample6 - 1]}.wav`;
+                                audioSource6.src = audioFileName6;
+                                audioPlayer6.load();
+                                audioPlayer6.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 
     <div class="container" id="abstractdiv">
-        <h2>PC arithmetics:</h2>
-        <h3>PC0 - Male-to-female:</h3>
-        <h3>PC1 - Intensity and HNR editing:</h3>
+        <h2>PC arithmetics</h2>
+        <h3>PC0 - Male-to-female</h3>
+        <h3>PC1 - Intensity and HNR editing</h3>
     </div>
 
 </body>
