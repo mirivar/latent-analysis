@@ -65,7 +65,7 @@
                             audioSlider.addEventListener("input", () => {
                                 const selectedSample = parseInt(audioSlider.value);
                                 correspondingValue.textContent = correspondingValues[selectedSample - 1]; // Adjust index
-                                const audioFileName = `./audio/female_to_male_43/wav_files/alpha${selectedSample - 1}.wav`;
+                                const audioFileName = `./audio/female_to_male_43/wav_files/alpha${correspondingValues[selectedSample - 1]}.wav`;
                                 audioSource.src = audioFileName;
                                 audioPlayer.load();
                                 audioPlayer.play();
