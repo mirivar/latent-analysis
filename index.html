@@ -30,51 +30,69 @@
     </div>
 
     <div class="container" id="abstractdiv">
-        <h2>Latent arithmetics:</h2>
+        <h2>Latent space arithmetics:</h2>
+        <h3>Male-to-female:</h3>
         <table class="table table-responsive">
-            <thead>
-                <tr class="text-center">
-                    <td>Male-to-female</td>
-                    <td>Speech cleaner</td>
-                </tr>
-
-            </thead>
-
             <tbody>
 
                 <tr class="pure-table-odd">
 
                     <td class="text-center">
-                        <input type="range" id="audioSlider" name="audioSlider" min="1" max="7" value="4">
+                        <input type="range" id="audioSlider1" name="audioSlider1" min="1" max="7" value="4">
 
-                        <p>&lambda; = <span id="correspondingValue">0</span></p>
+                        <p>&lambda; = <span id="correspondingValue1">0</span></p>
 
-                        <audio id="audioPlayer" controls>
-                            <source id="audioSource" src="./audio/female_to_male_43/wav_files/alpha0.wav"
+                        <audio id="audioPlayer1" controls>
+                            <source id="audioSource1" src="./audio/male_to_female_43/wav_files/alpha0.wav"
                                 type="audio/mpeg">
                         </audio>
 
                         <script>
-                            const audioSlider = document.getElementById("audioSlider");
-                            const correspondingValue = document.getElementById("correspondingValue");
-                            const audioPlayer = document.getElementById("audioPlayer");
-                            const audioSource = document.getElementById("audioSource");
+                            const audioSlider1 = document.getElementById("audioSlider1");
+                            const correspondingValue1 = document.getElementById("correspondingValue1");
+                            const audioPlayer1 = document.getElementById("audioPlayer1");
+                            const audioSource1 = document.getElementById("audioSource1");
 
-                            const correspondingValues = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+                            const correspondingValues1 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
 
-                            audioSlider.addEventListener("input", () => {
-                                const selectedSample = parseInt(audioSlider.value);
-                                correspondingValue.textContent = correspondingValues[selectedSample - 1]; // Adjust index
-                                const audioFileName = `./audio/female_to_male_43/wav_files/alpha${correspondingValues[selectedSample - 1]}.wav`;
-                                audioSource.src = audioFileName;
-                                audioPlayer.load();
-                                audioPlayer.play();
+                            audioSlider1.addEventListener("input", () => {
+                                const selectedSample1 = parseInt(audioSlider1.value);
+                                correspondingValue1.textContent = correspondingValues[selectedSample - 1]; // Adjust index
+                                const audioFileName1 = `./audio/male_to_female_43/wav_files/alpha${correspondingValues1[selectedSample1 - 1]}.wav`;
+                                audioSource1.src = audioFileName1;
+                                audioPlayer1.load();
+                                audioPlayer1.play();
                             });
                         </script>
                     </td>
-                    <td class="text-center"><audio controls style="width: 220px;">
-                            <source src="./audio/casual/cold/one_two_three_gen_short.wav" type="audio/mpeg">
-                        </audio></td>
+                    <td class="text-center">
+                        <input type="range" id="audioSlider2" name="audioSlider2" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue2">0</span></p>
+
+                        <audio id="audioPlayer2" controls>
+                            <source id="audioSource2" src="./audio/male_to_female_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider2 = document.getElementById("audioSlider2");
+                            const correspondingValue2 = document.getElementById("correspondingValue2");
+                            const audioPlayer2 = document.getElementById("audioPlayer2");
+                            const audioSource2 = document.getElementById("audioSource2");
+
+                            const correspondingValues2 = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
+
+                            audioSlider1.addEventListener("input", () => {
+                                const selectedSample2 = parseInt(audioSlider2.value);
+                                correspondingValue2.textContent = correspondingValues2[selectedSample - 1]; // Adjust index
+                                const audioFileName2 = `./audio/male_to_female_83/wav_files/alpha${correspondingValues2[selectedSample2 - 1]}.wav`;
+                                audioSource2.src = audioFileName2;
+                                audioPlayer2.load();
+                                audioPlayer2.play();
+                            });
+                        </script>
+                    </td>
                 </tr>
             </tbody>
         </table>
