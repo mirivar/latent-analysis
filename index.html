@@ -47,7 +47,7 @@
                     <td class="text-center">
                         <input type="range" id="audioSlider" name="audioSlider" min="1" max="7" value="4">
 
-                        <p>&lambda;=<span id="correspondingValue">0</span></p>
+                        <p>&lambda; = <span id="correspondingValue">0</span></p>
 
                         <audio id="audioPlayer" controls>
                             <source id="audioSource" src="./audio/female_to_male_43/wav_files/alpha0.wav"
@@ -55,7 +55,6 @@
                         </audio>
 
                         <script>
-                            // JavaScript code to change audio and display corresponding value
                             const audioSlider = document.getElementById("audioSlider");
                             const correspondingValue = document.getElementById("correspondingValue");
                             const audioPlayer = document.getElementById("audioPlayer");
@@ -64,14 +63,18 @@
                             const correspondingValues = ["-2", "-1", "-0.5", "0", "0.5", "1", "2"];
 
                             audioSlider.addEventListener("input", () => {
-                                const selectedSample = audioSlider.value;
+                                const selectedSample = parseInt(audioSlider.value);
                                 correspondingValue.textContent = correspondingValues[selectedSample - 1]; // Adjust index
-                                audioSource.src = `"./audio/female_to_male_43/wav_files/alpha" + ${correspondingValue[selectedSample - 1] } + ".wav"`;
+                                const audioFileName = `./audio/female_to_male_43/wav_files/alpha${selectedSample - 1}.wav`;
+                                audioSource.src = audioFileName;
                                 audioPlayer.load();
                                 audioPlayer.play();
                             });
                         </script>
                     </td>
+                    <td class="text-center"><audio controls style="width: 220px;">
+                            <source src="./audio/casual/cold/one_two_three_gen_short.wav" type="audio/mpeg">
+                        </audio></td>
                 </tr>
             </tbody>
         </table>
