@@ -172,6 +172,7 @@
     <div class="container" id="abstractdiv">
         <h2>Speaker embedding space arithmetics</h2>
         <h3>Male-to-female:</h3>
+        <p> * Note the collapse to male voice in both ends of the scale</p>
 
         <table class="table table-responsive">
             <thead>
@@ -252,7 +253,140 @@
     <div class="container" id="abstractdiv">
         <h2>PC arithmetics</h2>
         <h3>PC0 - Male-to-female</h3>
+        <table class="table table-responsive">
+            <thead>
+                <tr class="vertical edge text-center">
+                    <td>Source gender: Female</td>
+                    <td>Source gender: Male</td>
+
+
+            </thead>
+            <tbody>
+                <tr class="pure-table-odd">
+
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV7" name="audioSliderV7" min="1" max="11" value="6">
+
+                        <p>&lambda; = <span id="correspondingValueV7">0</span></p>
+
+                        <audio id="audioPlayerV7" controls>
+                            <source id="audioSourceV7" src="./audio/pc0/sample_11/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV7 = document.getElementById("audioSliderV7");
+                            const correspondingValueV7 = document.getElementById("correspondingValueV7");
+                            const audioPlayerV7 = document.getElementById("audioPlayerV7");
+                            const audioSourceV7 = document.getElementById("audioSourceV7");
+
+                            const correspondingValuesV7 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderV7.addEventListener("input", () => {
+                                const selectedSampleV7 = parseInt(audioSliderV7.value);
+                                correspondingValueV7.textContent = correspondingValuesV7[selectedSampleV7 - 1]; // Adjust index
+                                const audioFileNameV7 = `./audio/pc0/sample_11/wav_files/alpha${correspondingValuesV7[selectedSampleV7 - 1]}.wav`;
+                                audioSourceV7.src = audioFileNameV7;
+                                audioPlayerV7.load();
+                                audioPlayerV7.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV8" name="audioSliderV8" min="1" max="11" value="6">
+
+                        <p>&lambda; = <span id="correspondingValueV8">0</span></p>
+
+                        <audio id="audioPlayerV8" controls>
+                            <source id="audioSourceV8" src="./audio/pc0/sample_0/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV8 = document.getElementById("audioSliderV8");
+                            const correspondingValueV8 = document.getElementById("correspondingValueV8");
+                            const audioPlayerV8 = document.getElementById("audioPlayerV8");
+                            const audioSourceV8 = document.getElementById("audioSourceV8");
+
+                            const correspondingValuesV8 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderV8.addEventListener("input", () => {
+                                const selectedSampleV8 = parseInt(audioSliderV8.value);
+                                correspondingValueV8.textContent = correspondingValuesV8[selectedSampleV8 - 1]; // Adjust index
+                                const audioFileNameV8 = `./audio/pc0/sample_0/wav_files/alpha${correspondingValuesV8[selectedSampleV8 - 1]}.wav`;
+                                audioSourceV8.src = audioFileNameV8;
+                                audioPlayerV8.load();
+                                audioPlayerV8.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <h3>PC1 - Intensity and HNR editing</h3>
+        <table class="table table-responsive">
+            <tbody>
+                <tr class="pure-table-odd">
+
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV9" name="audioSliderV9" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueV9">0</span></p>
+
+                        <audio id="audioPlayerV9" controls>
+                            <source id="audioSourceV9" src="./audio/pc1/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV9 = document.getElementById("audioSliderV9");
+                            const correspondingValueV9 = document.getElementById("correspondingValueV9");
+                            const audioPlayerV9 = document.getElementById("audioPlayerV9");
+                            const audioSourceV9 = document.getElementById("audioSourceV9");
+
+                            const correspondingValuesV9 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderV9.addEventListener("input", () => {
+                                const selectedSampleV9 = parseInt(audioSliderV9.value);
+                                correspondingValueV9.textContent = correspondingValuesV9[selectedSampleV9 - 1]; // Adjust index
+                                const audioFileNameV9 = `./audio/pc1/sample_43/wav_files/alpha${correspondingValuesV9[selectedSampleV9 - 1]}.wav`;
+                                audioSourceV9.src = audioFileNameV9;
+                                audioPlayerV9.load();
+                                audioPlayerV9.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV10" name="audioSliderV10" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueV10">0</span></p>
+
+                        <audio id="audioPlayerV10" controls>
+                            <source id="audioSourceV10" src="./audio/pc1/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV10 = document.getElementById("audioSliderV10");
+                            const correspondingValueV10 = document.getElementById("correspondingValueV10");
+                            const audioPlayerV10 = document.getElementById("audioPlayerV10");
+                            const audioSourceV10 = document.getElementById("audioSourceV10");
+
+                            const correspondingValuesV10 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderV10.addEventListener("input", () => {
+                                const selectedSampleV10 = parseInt(audioSliderV10.value);
+                                correspondingValueV10.textContent = correspondingValuesV10[selectedSampleV10 - 1]; // Adjust index
+                                const audioFileNameV10 = `./audio/pc1/sample_83/wav_files/alpha${correspondingValuesV10[selectedSampleV10 - 1]}.wav`;
+                                audioSourceV10.src = audioFileNameV10;
+                                audioPlayerV10.load();
+                                audioPlayerV10.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
