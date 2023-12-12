@@ -29,21 +29,30 @@
         </span>
     </div>
 
-    <div class="container" id="abstractdiv">
+    <div class="centered-content" id="abstractdiv">
         <h2>Latent space arithmetics</h2>
         <h3>Male-to-female</h3>
         <table class="table table-responsive">
             <thead>
                 <tr class="vertical edge text-center">
-                    <td>Source gender: Female</td>
-                    <td>Source gender: Male</td>
+                    <th colspan="1" style="text-align: center;">Input text</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Female</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Male</th>
+                </tr>
 
 
             </thead>
             <tbody>
 
                 <tr class="pure-table-odd">
-
+                    <!-- <td colspan="1" style="text-align: center" ; class="wider-cell">He hoped there would be stew for
+                        dinner, turnips and
+                        carrots and bruised potatoes and fat mutton
+                        pieces to be ladled out in thick peppered flour-fattened sauce. Stuff it into you, his belly
+                        counselled him.</td> -->
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>1</p>
+                    </td>
                     <td class="vertical edge text-center">
                         <input type="range" id="audioSlider1" name="audioSlider1" min="1" max="9" value="5">
 
@@ -74,38 +83,6 @@
                         </script>
                     </td>
                     <td class="vertical edge text-center">
-                        <input type="range" id="audioSlider2" name="audioSlider2" min="1" max="9" value="5">
-
-                        <p>&lambda; = <span id="correspondingValue2">0</span></p>
-
-                        <audio id="audioPlayer2" controls>
-                            <source id="audioSource2"
-                                src="./audio/hifigan_universal/latent_arithmetics/gender/sample_83/wav_files/alpha0.wav"
-                                type="audio/mpeg">
-                        </audio>
-
-                        <script>
-                            const audioSlider2 = document.getElementById("audioSlider2");
-                            const correspondingValue2 = document.getElementById("correspondingValue2");
-                            const audioPlayer2 = document.getElementById("audioPlayer2");
-                            const audioSource2 = document.getElementById("audioSource2");
-
-                            const correspondingValues2 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
-
-                            audioSlider2.addEventListener("input", () => {
-                                const selectedSample2 = parseInt(audioSlider2.value);
-                                correspondingValue2.textContent = correspondingValues2[selectedSample2 - 1]; // Adjust index
-                                const audioFileName2 = `./audio/hifigan_universal/latent_arithmetics/gender/sample_83/wav_files/alpha${correspondingValues2[selectedSample2 - 1]}.wav`;
-                                audioSource2.src = audioFileName2;
-                                audioPlayer2.load();
-                                audioPlayer2.play();
-                            });
-                        </script>
-                    </td>
-                </tr>
-                <tr class="pure-table-odd">
-
-                    <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV17" name="audioSliderV17" min="1" max="9" value="5">
 
                         <p>&lambda; = <span id="correspondingValueV17">0</span></p>
@@ -131,6 +108,35 @@
                                 audioSourceV17.src = audioFileNameV17;
                                 audioPlayerV17.load();
                                 audioPlayerV17.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider2" name="audioSlider2" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValue2">0</span></p>
+
+                        <audio id="audioPlayer2" controls>
+                            <source id="audioSource2"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider2 = document.getElementById("audioSlider2");
+                            const correspondingValue2 = document.getElementById("correspondingValue2");
+                            const audioPlayer2 = document.getElementById("audioPlayer2");
+                            const audioSource2 = document.getElementById("audioSource2");
+
+                            const correspondingValues2 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSlider2.addEventListener("input", () => {
+                                const selectedSample2 = parseInt(audioSlider2.value);
+                                correspondingValue2.textContent = correspondingValues2[selectedSample2 - 1]; // Adjust index
+                                const audioFileName2 = `./audio/hifigan_universal/latent_arithmetics/gender/sample_83/wav_files/alpha${correspondingValues2[selectedSample2 - 1]}.wav`;
+                                audioSource2.src = audioFileName2;
+                                audioPlayer2.load();
+                                audioPlayer2.play();
                             });
                         </script>
                     </td>
@@ -164,14 +170,273 @@
                         </script>
                     </td>
                 </tr>
+
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>2</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_1" name="audioSliderText2_1" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_1">0</span></p>
+
+                        <audio id="audioPlayerText2_1" controls>
+                            <source id="audioSourceText2_1"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_1 = document.getElementById("audioSliderText2_1");
+                            const correspondingValueText2_1 = document.getElementById("correspondingValueText2_1");
+                            const audioPlayerText2_1 = document.getElementById("audioPlayerText2_1");
+                            const audioSourceText2_1 = document.getElementById("audioSourceText2_1");
+
+                            const correspondingValuesText2_1 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_1.addEventListener("input", () => {
+                                const selectedSampleText2_1 = parseInt(audioSliderText2_1.value);
+                                correspondingValueText2_1.textContent = correspondingValuesText2_1[selectedSampleText2_1 - 1]; // Adjust index
+                                const audioFileNameText2_1 = `./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_43/wav_files/alpha${correspondingValuesText2_1[selectedSampleText2_1 - 1]}.wav`;
+                                audioSourceText2_1.src = audioFileNameText2_1;
+                                audioPlayerText2_1.load();
+                                audioPlayerText2_1.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V17" name="audioSliderText2_V17" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V17">0</span></p>
+
+                        <audio id="audioPlayerText2_V17" controls>
+                            <source id="audioSourceText2_V17"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V17 = document.getElementById("audioSliderText2_V17");
+                            const correspondingValueText2_V17 = document.getElementById("correspondingValueText2_V17");
+                            const audioPlayerText2_V17 = document.getElementById("audioPlayerText2_V17");
+                            const audioSourceText2_V17 = document.getElementById("audioSourceText2_V17");
+
+                            const correspondingValuesText2_V17 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V17.addEventListener("input", () => {
+                                const selectedSampleText2_V17 = parseInt(audioSliderText2_V17.value);
+                                correspondingValueText2_V17.textContent = correspondingValuesText2_V17[selectedSampleText2_V17 - 1]; // Adjust index
+                                const audioFileNameText2_V17 = `./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_18/wav_files/alpha${correspondingValuesText2_V17[selectedSampleText2_V17 - 1]}.wav`;
+                                audioSourceText2_V17.src = audioFileNameText2_V17;
+                                audioPlayerText2_V17.load();
+                                audioPlayerText2_V17.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_2" name="audioSliderText2_2" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_2">0</span></p>
+
+                        <audio id="audioPlayerText2_2" controls>
+                            <source id="audioSourceText2_2"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_2 = document.getElementById("audioSliderText2_2");
+                            const correspondingValueText2_2 = document.getElementById("correspondingValueText2_2");
+                            const audioPlayerText2_2 = document.getElementById("audioPlayerText2_2");
+                            const audioSourceText2_2 = document.getElementById("audioSourceText2_2");
+
+                            const correspondingValuesText2_2 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_2.addEventListener("input", () => {
+                                const selectedSampleText2_2 = parseInt(audioSliderText2_2.value);
+                                correspondingValueText2_2.textContent = correspondingValuesText2_2[selectedSampleText2_2 - 1]; // Adjust index
+                                const audioFileNameText2_2 = `./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_83/wav_files/alpha${correspondingValuesText2_2[selectedSampleText2_2 - 1]}.wav`;
+                                audioSourceText2_2.src = audioFileNameText2_2;
+                                audioPlayerText2_2.load();
+                                audioPlayerText2_2.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V18" name="audioSliderText2_V18" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V18">0</span></p>
+
+                        <audio id="audioPlayerText2_V18" controls>
+                            <source id="audioSourceText2_V18"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V18 = document.getElementById("audioSliderText2_V18");
+                            const correspondingValueText2_V18 = document.getElementById("correspondingValueText2_V18");
+                            const audioPlayerText2_V18 = document.getElementById("audioPlayerText2_V18");
+                            const audioSourceText2_V18 = document.getElementById("audioSourceText2_V18");
+
+                            const correspondingValuesText2_V18 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V18.addEventListener("input", () => {
+                                const selectedSampleText2_V18 = parseInt(audioSliderText2_V18.value);
+                                correspondingValueText2_V18.textContent = correspondingValuesText2_V18[selectedSampleText2_V18 - 1]; // Adjust index
+                                const audioFileNameText2_V18 = `./audio/hifigan_universal/latent_arithmetics/gender/text_2/sample_146/wav_files/alpha${correspondingValuesText2_V18[selectedSampleText2_V18 - 1]}.wav`;
+                                audioSourceText2_V18.src = audioFileNameText2_V18;
+                                audioPlayerText2_V18.load();
+                                audioPlayerText2_V18.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>3</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_1" name="audioSliderText3_1" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_1">0</span></p>
+
+                        <audio id="audioPlayerText3_1" controls>
+                            <source id="audioSourceText3_1"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_1 = document.getElementById("audioSliderText3_1");
+                            const correspondingValueText3_1 = document.getElementById("correspondingValueText3_1");
+                            const audioPlayerText3_1 = document.getElementById("audioPlayerText3_1");
+                            const audioSourceText3_1 = document.getElementById("audioSourceText3_1");
+
+                            const correspondingValuesText3_1 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_1.addEventListener("input", () => {
+                                const selectedSampleText3_1 = parseInt(audioSliderText3_1.value);
+                                correspondingValueText3_1.textContent = correspondingValuesText3_1[selectedSampleText3_1 - 1]; // Adjust index
+                                const audioFileNameText3_1 = `./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_43/wav_files/alpha${correspondingValuesText3_1[selectedSampleText3_1 - 1]}.wav`;
+                                audioSourceText3_1.src = audioFileNameText3_1;
+                                audioPlayerText3_1.load();
+                                audioPlayerText3_1.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V17" name="audioSliderText3_V17" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V17">0</span></p>
+
+                        <audio id="audioPlayerText3_V17" controls>
+                            <source id="audioSourceText3_V17"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V17 = document.getElementById("audioSliderText3_V17");
+                            const correspondingValueText3_V17 = document.getElementById("correspondingValueText3_V17");
+                            const audioPlayerText3_V17 = document.getElementById("audioPlayerText3_V17");
+                            const audioSourceText3_V17 = document.getElementById("audioSourceText3_V17");
+
+                            const correspondingValuesText3_V17 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V17.addEventListener("input", () => {
+                                const selectedSampleText3_V17 = parseInt(audioSliderText3_V17.value);
+                                correspondingValueText3_V17.textContent = correspondingValuesText3_V17[selectedSampleText3_V17 - 1]; // Adjust index
+                                const audioFileNameText3_V17 = `./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_18/wav_files/alpha${correspondingValuesText3_V17[selectedSampleText3_V17 - 1]}.wav`;
+                                audioSourceText3_V17.src = audioFileNameText3_V17;
+                                audioPlayerText3_V17.load();
+                                audioPlayerText3_V17.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_2" name="audioSliderText3_2" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_2">0</span></p>
+
+                        <audio id="audioPlayerText3_2" controls>
+                            <source id="audioSourceText3_2"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_2 = document.getElementById("audioSliderText3_2");
+                            const correspondingValueText3_2 = document.getElementById("correspondingValueText3_2");
+                            const audioPlayerText3_2 = document.getElementById("audioPlayerText3_2");
+                            const audioSourceText3_2 = document.getElementById("audioSourceText3_2");
+
+                            const correspondingValuesText3_2 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_2.addEventListener("input", () => {
+                                const selectedSampleText3_2 = parseInt(audioSliderText3_2.value);
+                                correspondingValueText3_2.textContent = correspondingValuesText3_2[selectedSampleText3_2 - 1]; // Adjust index
+                                const audioFileNameText3_2 = `./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_83/wav_files/alpha${correspondingValuesText3_2[selectedSampleText3_2 - 1]}.wav`;
+                                audioSourceText3_2.src = audioFileNameText3_2;
+                                audioPlayerText3_2.load();
+                                audioPlayerText3_2.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V18" name="audioSliderText3_V18" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V18">0</span></p>
+
+                        <audio id="audioPlayerText3_V18" controls>
+                            <source id="audioSourceText3_V18"
+                                src="./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V18 = document.getElementById("audioSliderText3_V18");
+                            const correspondingValueText3_V18 = document.getElementById("correspondingValueText3_V18");
+                            const audioPlayerText3_V18 = document.getElementById("audioPlayerText3_V18");
+                            const audioSourceText3_V18 = document.getElementById("audioSourceText3_V18");
+
+                            const correspondingValuesText3_V18 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V18.addEventListener("input", () => {
+                                const selectedSampleText3_V18 = parseInt(audioSliderText3_V18.value);
+                                correspondingValueText3_V18.textContent = correspondingValuesText3_V18[selectedSampleText3_V18 - 1]; // Adjust index
+                                const audioFileNameText3_V18 = `./audio/hifigan_universal/latent_arithmetics/gender/text_3/sample_146/wav_files/alpha${correspondingValuesText3_V18[selectedSampleText3_V18 - 1]}.wav`;
+                                audioSourceText3_V18.src = audioFileNameText3_V18;
+                                audioPlayerText3_V18.load();
+                                audioPlayerText3_V18.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
             </tbody>
         </table>
-
-        <h3>Speech enhancement</h3>
+        <div class="after-table-content">
+            <!-- Content after the table -->
+        </div>
+        <!-- <h3>Speech enhancement</h3>
         <table class="table table-responsive">
+            <thead>
+                <tr class="vertical edge text-center">
+                    <th colspan="1" style="text-align: center;">Input text</th>
+                    <th colspan="4" style="text-align: center;">Speech samples</th>
+                </tr>
+
+
+            </thead>
             <tbody>
                 <tr class="pure-table-odd">
-
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>1</p>
+                    </td>
                     <td class="vertical edge text-center">
                         <input type="range" id="audioSlider3" name="audioSlider3" min="1" max="7" value="4">
 
@@ -202,38 +467,6 @@
                         </script>
                     </td>
                     <td class="vertical edge text-center">
-                        <input type="range" id="audioSlider4" name="audioSlider4" min="1" max="7" value="4">
-
-                        <p>&lambda; = <span id="correspondingValue4">0</span></p>
-
-                        <audio id="audioPlayer4" controls>
-                            <source id="audioSource4"
-                                src="./audio/hifigan_universal/latent_arithmetics/enhancement/sample_0/wav_files/alpha0.wav"
-                                type="audio/mpeg">
-                        </audio>
-
-                        <script>
-                            const audioSlider4 = document.getElementById("audioSlider4");
-                            const correspondingValue4 = document.getElementById("correspondingValue4");
-                            const audioPlayer4 = document.getElementById("audioPlayer4");
-                            const audioSource4 = document.getElementById("audioSource4");
-
-                            const correspondingValues4 = ["-2", "-1", "-0.5", "0", "0.5", "1", "1.5"];
-
-                            audioSlider4.addEventListener("input", () => {
-                                const selectedSample4 = parseInt(audioSlider4.value);
-                                correspondingValue4.textContent = correspondingValues4[selectedSample4 - 1]; // Adjust index
-                                const audioFileName4 = `./audio/hifigan_universal/latent_arithmetics/enhancement/sample_0/wav_files/alpha${correspondingValues4[selectedSample4 - 1]}.wav`;
-                                audioSource4.src = audioFileName4;
-                                audioPlayer4.load();
-                                audioPlayer4.play();
-                            });
-                        </script>
-                    </td>
-                </tr>
-                <tr class="pure-table-odd">
-
-                    <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV13" name="audioSliderV13" min="1" max="9" value="5">
 
                         <p>&lambda; = <span id="correspondingValueV13">0</span></p>
@@ -259,6 +492,35 @@
                                 audioSourceV13.src = audioFileNameV13;
                                 audioPlayerV13.load();
                                 audioPlayerV13.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider4" name="audioSlider4" min="1" max="7" value="4">
+
+                        <p>&lambda; = <span id="correspondingValue4">0</span></p>
+
+                        <audio id="audioPlayer4" controls>
+                            <source id="audioSource4"
+                                src="./audio/hifigan_universal/latent_arithmetics/enhancement/sample_0/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider4 = document.getElementById("audioSlider4");
+                            const correspondingValue4 = document.getElementById("correspondingValue4");
+                            const audioPlayer4 = document.getElementById("audioPlayer4");
+                            const audioSource4 = document.getElementById("audioSource4");
+
+                            const correspondingValues4 = ["-2", "-1", "-0.5", "0", "0.5", "1", "1.5"];
+
+                            audioSlider4.addEventListener("input", () => {
+                                const selectedSample4 = parseInt(audioSlider4.value);
+                                correspondingValue4.textContent = correspondingValues4[selectedSample4 - 1]; // Adjust index
+                                const audioFileName4 = `./audio/hifigan_universal/latent_arithmetics/enhancement/sample_0/wav_files/alpha${correspondingValues4[selectedSample4 - 1]}.wav`;
+                                audioSource4.src = audioFileName4;
+                                audioPlayer4.load();
+                                audioPlayer4.play();
                             });
                         </script>
                     </td>
@@ -293,27 +555,35 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
 
     </div>
 
-    <div class="container" id="abstractdiv">
+    <div class="centered-content" id="abstractdiv">
         <h2>Speaker embedding space arithmetics</h2>
-        <h3>Male-to-female:</h3>
+        <h3>Male-to-female</h3>
         <p> * Note the collapse to male voice in both ends of the scale</p>
 
         <table class="table table-responsive">
             <thead>
                 <tr class="vertical edge text-center">
-                    <td>Source gender: Female</td>
-                    <td>Source gender: Male</td>
-
+                    <th colspan="1" style="text-align: center;">Input text</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Female</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Male</th>
+                </tr>
 
             </thead>
             <tbody>
 
                 <tr class="pure-table-odd">
-
+                    <!-- <td colspan="1" style="text-align: center" ; class="wider-cell">He hoped there would be stew for
+                        dinner, turnips and
+                        carrots and bruised potatoes and fat mutton
+                        pieces to be ladled out in thick peppered flour-fattened sauce. Stuff it into you, his belly
+                        counselled him.</td> -->
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>1</p>
+                    </td>
                     <td class="vertical edge text-center">
                         <input type="range" id="audioSlider5" name="audioSlider5" min="1" max="9" value="5">
 
@@ -344,38 +614,6 @@
                         </script>
                     </td>
                     <td class="vertical edge text-center">
-                        <input type="range" id="audioSlider6" name="audioSlider6" min="1" max="9" value="5">
-
-                        <p>&lambda; = <span id="correspondingValue6">0</span></p>
-
-                        <audio id="audioPlayer6" controls>
-                            <source id="audioSource6"
-                                src="./audio/hifigan_universal/speaker_embeddings/sample_83/wav_files/alpha0.wav"
-                                type="audio/mpeg">
-                        </audio>
-
-                        <script>
-                            const audioSlider6 = document.getElementById("audioSlider6");
-                            const correspondingValue6 = document.getElementById("correspondingValue6");
-                            const audioPlayer6 = document.getElementById("audioPlayer6");
-                            const audioSource6 = document.getElementById("audioSource6");
-
-                            const correspondingValues6 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
-
-                            audioSlider6.addEventListener("input", () => {
-                                const selectedSample6 = parseInt(audioSlider6.value);
-                                correspondingValue6.textContent = correspondingValues6[selectedSample6 - 1]; // Adjust index
-                                const audioFileName6 = `./audio/hifigan_universal/speaker_embeddings/sample_83/wav_files/alpha${correspondingValues6[selectedSample6 - 1]}.wav`;
-                                audioSource6.src = audioFileName6;
-                                audioPlayer6.load();
-                                audioPlayer6.play();
-                            });
-                        </script>
-                    </td>
-                </tr>
-                <tr class="pure-table-odd">
-
-                    <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV19" name="audioSliderV19" min="1" max="9" value="5">
 
                         <p>&lambda; = <span id="correspondingValueV19">0</span></p>
@@ -401,6 +639,35 @@
                                 audioSourceV19.src = audioFileNameV19;
                                 audioPlayerV19.load();
                                 audioPlayerV19.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSlider6" name="audioSlider6" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValue6">0</span></p>
+
+                        <audio id="audioPlayer6" controls>
+                            <source id="audioSource6"
+                                src="./audio/hifigan_universal/speaker_embeddings/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSlider6 = document.getElementById("audioSlider6");
+                            const correspondingValue6 = document.getElementById("correspondingValue6");
+                            const audioPlayer6 = document.getElementById("audioPlayer6");
+                            const audioSource6 = document.getElementById("audioSource6");
+
+                            const correspondingValues6 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSlider6.addEventListener("input", () => {
+                                const selectedSample6 = parseInt(audioSlider6.value);
+                                correspondingValue6.textContent = correspondingValues6[selectedSample6 - 1]; // Adjust index
+                                const audioFileName6 = `./audio/hifigan_universal/speaker_embeddings/sample_83/wav_files/alpha${correspondingValues6[selectedSample6 - 1]}.wav`;
+                                audioSource6.src = audioFileName6;
+                                audioPlayer6.load();
+                                audioPlayer6.play();
                             });
                         </script>
                     </td>
@@ -434,26 +701,282 @@
                         </script>
                     </td>
                 </tr>
+
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>2</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_5" name="audioSliderText2_5" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_5">0</span></p>
+
+                        <audio id="audioPlayerText2_5" controls>
+                            <source id="audioSourceText2_5"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_2/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_5 = document.getElementById("audioSliderText2_5");
+                            const correspondingValueText2_5 = document.getElementById("correspondingValueText2_5");
+                            const audioPlayerText2_5 = document.getElementById("audioPlayerText2_5");
+                            const audioSourceText2_5 = document.getElementById("audioSourceText2_5");
+
+                            const correspondingValuesText2_5 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_5.addEventListener("input", () => {
+                                const selectedSampleText2_5 = parseInt(audioSliderText2_5.value);
+                                correspondingValueText2_5.textContent = correspondingValuesText2_5[selectedSampleText2_5 - 1]; // Adjust index
+                                const audioFileNameText2_5 = `./audio/hifigan_universal/speaker_embeddings/text_2/sample_43/wav_files/alpha${correspondingValuesText2_5[selectedSampleText2_5 - 1]}.wav`;
+                                audioSourceText2_5.src = audioFileNameText2_5;
+                                audioPlayerText2_5.load();
+                                audioPlayerText2_5.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V19" name="audioSliderText2_V19" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V19">0</span></p>
+
+                        <audio id="audioPlayerText2_V19" controls>
+                            <source id="audioSourceText2_V19"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_2/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V19 = document.getElementById("audioSliderText2_V19");
+                            const correspondingValueText2_V19 = document.getElementById("correspondingValueText2_V19");
+                            const audioPlayerText2_V19 = document.getElementById("audioPlayerText2_V19");
+                            const audioSourceText2_V19 = document.getElementById("audioSourceText2_V19");
+
+                            const correspondingValuesText2_V19 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V19.addEventListener("input", () => {
+                                const selectedSampleText2_V19 = parseInt(audioSliderText2_V19.value);
+                                correspondingValueText2_V19.textContent = correspondingValuesText2_V19[selectedSampleText2_V19 - 1]; // Adjust index
+                                const audioFileNameText2_V19 = `./audio/hifigan_universal/speaker_embeddings/text_2/sample_18/wav_files/alpha${correspondingValuesText2_V19[selectedSampleText2_V19 - 1]}.wav`;
+                                audioSourceText2_V19.src = audioFileNameText2_V19;
+                                audioPlayerText2_V19.load();
+                                audioPlayerText2_V19.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_6" name="audioSliderText2_6" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_6">0</span></p>
+
+                        <audio id="audioPlayerText2_6" controls>
+                            <source id="audioSourceText2_6"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_2/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_6 = document.getElementById("audioSliderText2_6");
+                            const correspondingValueText2_6 = document.getElementById("correspondingValueText2_6");
+                            const audioPlayerText2_6 = document.getElementById("audioPlayerText2_6");
+                            const audioSourceText2_6 = document.getElementById("audioSourceText2_6");
+
+                            const correspondingValuesText2_6 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_6.addEventListener("input", () => {
+                                const selectedSampleText2_6 = parseInt(audioSliderText2_6.value);
+                                correspondingValueText2_6.textContent = correspondingValuesText2_6[selectedSampleText2_6 - 1]; // Adjust index
+                                const audioFileNameText2_6 = `./audio/hifigan_universal/speaker_embeddings/text_2/sample_83/wav_files/alpha${correspondingValuesText2_6[selectedSampleText2_6 - 1]}.wav`;
+                                audioSourceText2_6.src = audioFileNameText2_6;
+                                audioPlayerText2_6.load();
+                                audioPlayerText2_6.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V20" name="audioSliderText2_V20" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V20">0</span></p>
+
+                        <audio id="audioPlayerText2_V20" controls>
+                            <source id="audioSourceText2_V20"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_2/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V20 = document.getElementById("audioSliderText2_V20");
+                            const correspondingValueText2_V20 = document.getElementById("correspondingValueText2_V20");
+                            const audioPlayerText2_V20 = document.getElementById("audioPlayerText2_V20");
+                            const audioSourceText2_V20 = document.getElementById("audioSourceText2_V20");
+
+                            const correspondingValuesText2_V20 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V20.addEventListener("input", () => {
+                                const selectedSampleText2_V20 = parseInt(audioSliderText2_V20.value);
+                                correspondingValueText2_V20.textContent = correspondingValuesText2_V20[selectedSampleText2_V20 - 1]; // Adjust index
+                                const audioFileNameText2_V20 = `./audio/hifigan_universal/speaker_embeddings/text_2/sample_146/wav_files/alpha${correspondingValuesText2_V20[selectedSampleText2_V20 - 1]}.wav`;
+                                audioSourceText2_V20.src = audioFileNameText2_V20;
+                                audioPlayerText2_V20.load();
+                                audioPlayerText2_V20.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>3</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_5" name="audioSliderText3_5" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_5">0</span></p>
+
+                        <audio id="audioPlayerText3_5" controls>
+                            <source id="audioSourceText3_5"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_3/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_5 = document.getElementById("audioSliderText3_5");
+                            const correspondingValueText3_5 = document.getElementById("correspondingValueText3_5");
+                            const audioPlayerText3_5 = document.getElementById("audioPlayerText3_5");
+                            const audioSourceText3_5 = document.getElementById("audioSourceText3_5");
+
+                            const correspondingValuesText3_5 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_5.addEventListener("input", () => {
+                                const selectedSampleText3_5 = parseInt(audioSliderText3_5.value);
+                                correspondingValueText3_5.textContent = correspondingValuesText3_5[selectedSampleText3_5 - 1]; // Adjust index
+                                const audioFileNameText3_5 = `./audio/hifigan_universal/speaker_embeddings/text_3/sample_43/wav_files/alpha${correspondingValuesText3_5[selectedSampleText3_5 - 1]}.wav`;
+                                audioSourceText3_5.src = audioFileNameText3_5;
+                                audioPlayerText3_5.load();
+                                audioPlayerText3_5.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V19" name="audioSliderText3_V19" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V19">0</span></p>
+
+                        <audio id="audioPlayerText3_V19" controls>
+                            <source id="audioSourceText3_V19"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_3/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V19 = document.getElementById("audioSliderText3_V19");
+                            const correspondingValueText3_V19 = document.getElementById("correspondingValueText3_V19");
+                            const audioPlayerText3_V19 = document.getElementById("audioPlayerText3_V19");
+                            const audioSourceText3_V19 = document.getElementById("audioSourceText3_V19");
+
+                            const correspondingValuesText3_V19 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V19.addEventListener("input", () => {
+                                const selectedSampleText3_V19 = parseInt(audioSliderText3_V19.value);
+                                correspondingValueText3_V19.textContent = correspondingValuesText3_V19[selectedSampleText3_V19 - 1]; // Adjust index
+                                const audioFileNameText3_V19 = `./audio/hifigan_universal/speaker_embeddings/text_3/sample_18/wav_files/alpha${correspondingValuesText3_V19[selectedSampleText3_V19 - 1]}.wav`;
+                                audioSourceText3_V19.src = audioFileNameText3_V19;
+                                audioPlayerText3_V19.load();
+                                audioPlayerText3_V19.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_6" name="audioSliderText3_6" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_6">0</span></p>
+
+                        <audio id="audioPlayerText3_6" controls>
+                            <source id="audioSourceText3_6"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_3/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_6 = document.getElementById("audioSliderText3_6");
+                            const correspondingValueText3_6 = document.getElementById("correspondingValueText3_6");
+                            const audioPlayerText3_6 = document.getElementById("audioPlayerText3_6");
+                            const audioSourceText3_6 = document.getElementById("audioSourceText3_6");
+
+                            const correspondingValuesText3_6 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_6.addEventListener("input", () => {
+                                const selectedSampleText3_6 = parseInt(audioSliderText3_6.value);
+                                correspondingValueText3_6.textContent = correspondingValuesText3_6[selectedSampleText3_6 - 1]; // Adjust index
+                                const audioFileNameText3_6 = `./audio/hifigan_universal/speaker_embeddings/text_3/sample_83/wav_files/alpha${correspondingValuesText3_6[selectedSampleText3_6 - 1]}.wav`;
+                                audioSourceText3_6.src = audioFileNameText3_6;
+                                audioPlayerText3_6.load();
+                                audioPlayerText3_6.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V20" name="audioSliderText3_V20" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V20">0</span></p>
+
+                        <audio id="audioPlayerText3_V20" controls>
+                            <source id="audioSourceText3_V20"
+                                src="./audio/hifigan_universal/speaker_embeddings/text_3/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V20 = document.getElementById("audioSliderText3_V20");
+                            const correspondingValueText3_V20 = document.getElementById("correspondingValueText3_V20");
+                            const audioPlayerText3_V20 = document.getElementById("audioPlayerText3_V20");
+                            const audioSourceText3_V20 = document.getElementById("audioSourceText3_V20");
+
+                            const correspondingValuesText3_V20 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V20.addEventListener("input", () => {
+                                const selectedSampleText3_V20 = parseInt(audioSliderText3_V20.value);
+                                correspondingValueText3_V20.textContent = correspondingValuesText3_V20[selectedSampleText3_V20 - 1]; // Adjust index
+                                const audioFileNameText3_V20 = `./audio/hifigan_universal/speaker_embeddings/text_3/sample_146/wav_files/alpha${correspondingValuesText3_V20[selectedSampleText3_V20 - 1]}.wav`;
+                                audioSourceText3_V20.src = audioFileNameText3_V20;
+                                audioPlayerText3_V20.load();
+                                audioPlayerText3_V20.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
             </tbody>
 
         </table>
+        <div class="after-table-content">
+            <!-- Content after the table -->
+        </div>
     </div>
 
 
-    <div class="container" id="abstractdiv">
+    <div class="centered-content" id="abstractdiv">
         <h2>PC arithmetics</h2>
-        <h3>PC0 - Male-to-female</h3>
+        <h3>PC1 - Male-to-female</h3>
         <table class="table table-responsive">
             <thead>
                 <tr class="vertical edge text-center">
-                    <td>Source gender: Female</td>
-                    <td>Source gender: Male</td>
-
-
+                    <th colspan="1" style="text-align: center;">Input text</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Female</th>
+                    <th colspan="2" style="text-align: center;">Source gender: Male</th>
             </thead>
             <tbody>
                 <tr class="pure-table-odd">
-
+                    <!-- <td colspan="1" style="text-align: center" ; class="wider-cell">He hoped there would be stew for
+                        dinner, turnips and
+                        carrots and bruised potatoes and fat mutton
+                        pieces to be ladled out in thick peppered flour-fattened sauce. Stuff it into you, his belly
+                        counselled him.</td> -->
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>1</p>
+                    </td>
                     <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV7" name="audioSliderV7" min="1" max="11" value="6">
 
@@ -483,37 +1006,6 @@
                         </script>
                     </td>
                     <td class="vertical edge text-center">
-                        <input type="range" id="audioSliderV8" name="audioSliderV8" min="1" max="11" value="6">
-
-                        <p>&lambda; = <span id="correspondingValueV8">0</span></p>
-
-                        <audio id="audioPlayerV8" controls>
-                            <source id="audioSourceV8"
-                                src="./audio/hifigan_universal/pc0/sample_83/wav_files/alpha0.wav" type="audio/mpeg">
-                        </audio>
-
-                        <script>
-                            const audioSliderV8 = document.getElementById("audioSliderV8");
-                            const correspondingValueV8 = document.getElementById("correspondingValueV8");
-                            const audioPlayerV8 = document.getElementById("audioPlayerV8");
-                            const audioSourceV8 = document.getElementById("audioSourceV8");
-
-                            const correspondingValuesV8 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
-
-                            audioSliderV8.addEventListener("input", () => {
-                                const selectedSampleV8 = parseInt(audioSliderV8.value);
-                                correspondingValueV8.textContent = correspondingValuesV8[selectedSampleV8 - 1]; // Adjust index
-                                const audioFileNameV8 = `./audio/hifigan_universal/pc0/sample_83/wav_files/alpha${correspondingValuesV8[selectedSampleV8 - 1]}.wav`;
-                                audioSourceV8.src = audioFileNameV8;
-                                audioPlayerV8.load();
-                                audioPlayerV8.play();
-                            });
-                        </script>
-                    </td>
-                </tr>
-                <tr class="pure-table-odd">
-
-                    <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV15" name="audioSliderV15" min="1" max="11" value="6">
 
                         <p>&lambda; = <span id="correspondingValueV15">0</span></p>
@@ -538,6 +1030,34 @@
                                 audioSourceV15.src = audioFileNameV15;
                                 audioPlayerV15.load();
                                 audioPlayerV15.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV8" name="audioSliderV8" min="1" max="11" value="6">
+
+                        <p>&lambda; = <span id="correspondingValueV8">0</span></p>
+
+                        <audio id="audioPlayerV8" controls>
+                            <source id="audioSourceV8"
+                                src="./audio/hifigan_universal/pc0/sample_83/wav_files/alpha0.wav" type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV8 = document.getElementById("audioSliderV8");
+                            const correspondingValueV8 = document.getElementById("correspondingValueV8");
+                            const audioPlayerV8 = document.getElementById("audioPlayerV8");
+                            const audioSourceV8 = document.getElementById("audioSourceV8");
+
+                            const correspondingValuesV8 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderV8.addEventListener("input", () => {
+                                const selectedSampleV8 = parseInt(audioSliderV8.value);
+                                correspondingValueV8.textContent = correspondingValuesV8[selectedSampleV8 - 1]; // Adjust index
+                                const audioFileNameV8 = `./audio/hifigan_universal/pc0/sample_83/wav_files/alpha${correspondingValuesV8[selectedSampleV8 - 1]}.wav`;
+                                audioSourceV8.src = audioFileNameV8;
+                                audioPlayerV8.load();
+                                audioPlayerV8.play();
                             });
                         </script>
                     </td>
@@ -570,14 +1090,282 @@
                         </script>
                     </td>
                 </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>2</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V7" name="audioSliderText2_V7" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V7">0</span></p>
+
+                        <audio id="audioPlayerText2_V7" controls>
+                            <source id="audioSourceText2_V7"
+                                src="./audio/hifigan_universal/pc0/text_2/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V7 = document.getElementById("audioSliderText2_V7");
+                            const correspondingValueText2_V7 = document.getElementById("correspondingValueText2_V7");
+                            const audioPlayerText2_V7 = document.getElementById("audioPlayerText2_V7");
+                            const audioSourceText2_V7 = document.getElementById("audioSourceText2_V7");
+
+                            const correspondingValuesText2_V7 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText2_V7.addEventListener("input", () => {
+                                const selectedSampleText2_V7 = parseInt(audioSliderText2_V7.value);
+                                correspondingValueText2_V7.textContent = correspondingValuesText2_V7[selectedSampleText2_V7 - 1]; // Adjust index
+                                const audioFileNameText2_V7 = `./audio/hifigan_universal/pc0/text_2/sample_43/wav_files/alpha${correspondingValuesText2_V7[selectedSampleText2_V7 - 1]}.wav`;
+                                audioSourceText2_V7.src = audioFileNameText2_V7;
+                                audioPlayerText2_V7.load();
+                                audioPlayerText2_V7.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V15" name="audioSliderText2_V15" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V15">0</span></p>
+
+                        <audio id="audioPlayerText2_V15" controls>
+                            <source id="audioSourceText2_V15"
+                                src="./audio/hifigan_universal/pc0/text_2/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V15 = document.getElementById("audioSliderText2_V15");
+                            const correspondingValueText2_V15 = document.getElementById("correspondingValueText2_V15");
+                            const audioPlayerText2_V15 = document.getElementById("audioPlayerText2_V15");
+                            const audioSourceText2_V15 = document.getElementById("audioSourceText2_V15");
+
+                            const correspondingValuesText2_V15 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText2_V15.addEventListener("input", () => {
+                                const selectedSampleText2_V15 = parseInt(audioSliderText2_V15.value);
+                                correspondingValueText2_V15.textContent = correspondingValuesText2_V15[selectedSampleText2_V15 - 1]; // Adjust index
+                                const audioFileNameText2_V15 = `./audio/hifigan_universal/pc0/text_2/sample_18/wav_files/alpha${correspondingValuesText2_V15[selectedSampleText2_V15 - 1]}.wav`;
+                                audioSourceText2_V15.src = audioFileNameText2_V15;
+                                audioPlayerText2_V15.load();
+                                audioPlayerText2_V15.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V8" name="audioSliderText2_V8" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V8">0</span></p>
+
+                        <audio id="audioPlayerText2_V8" controls>
+                            <source id="audioSourceText2_V8"
+                                src="./audio/hifigan_universal/pc0/text_2/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V8 = document.getElementById("audioSliderText2_V8");
+                            const correspondingValueText2_V8 = document.getElementById("correspondingValueText2_V8");
+                            const audioPlayerText2_V8 = document.getElementById("audioPlayerText2_V8");
+                            const audioSourceText2_V8 = document.getElementById("audioSourceText2_V8");
+
+                            const correspondingValuesText2_V8 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText2_V8.addEventListener("input", () => {
+                                const selectedSampleText2_V8 = parseInt(audioSliderText2_V8.value);
+                                correspondingValueText2_V8.textContent = correspondingValuesText2_V8[selectedSampleText2_V8 - 1]; // Adjust index
+                                const audioFileNameText2_V8 = `./audio/hifigan_universal/pc0/text_2/sample_83/wav_files/alpha${correspondingValuesText2_V8[selectedSampleText2_V8 - 1]}.wav`;
+                                audioSourceText2_V8.src = audioFileNameText2_V8;
+                                audioPlayerText2_V8.load();
+                                audioPlayerText2_V8.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V16" name="audioSliderText2_V16" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V16">0</span></p>
+
+                        <audio id="audioPlayerText2_V16" controls>
+                            <source id="audioSourceText2_V16"
+                                src="./audio/hifigan_universal/pc0/text_2/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V16 = document.getElementById("audioSliderText2_V16");
+                            const correspondingValueText2_V16 = document.getElementById("correspondingValueText2_V16");
+                            const audioPlayerText2_V16 = document.getElementById("audioPlayerText2_V16");
+                            const audioSourceText2_V16 = document.getElementById("audioSourceText2_V16");
+
+                            const correspondingValuesText2_V16 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText2_V16.addEventListener("input", () => {
+                                const selectedSampleText2_V16 = parseInt(audioSliderText2_V16.value);
+                                correspondingValueText2_V16.textContent = correspondingValuesText2_V16[selectedSampleText2_V16 - 1]; // Adjust index
+                                const audioFileNameText2_V16 = `./audio/hifigan_universal/pc0/text_2/sample_146/wav_files/alpha${correspondingValuesText2_V16[selectedSampleText2_V16 - 1]}.wav`;
+                                audioSourceText2_V16.src = audioFileNameText2_V16;
+                                audioPlayerText2_V16.load();
+                                audioPlayerText2_V16.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>3</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V7" name="audioSliderText3_V7" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V7">0</span></p>
+
+                        <audio id="audioPlayerText3_V7" controls>
+                            <source id="audioSourceText3_V7"
+                                src="./audio/hifigan_universal/pc0/text_3/sample_43/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V7 = document.getElementById("audioSliderText3_V7");
+                            const correspondingValueText3_V7 = document.getElementById("correspondingValueText3_V7");
+                            const audioPlayerText3_V7 = document.getElementById("audioPlayerText3_V7");
+                            const audioSourceText3_V7 = document.getElementById("audioSourceText3_V7");
+
+                            const correspondingValuesText3_V7 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText3_V7.addEventListener("input", () => {
+                                const selectedSampleText3_V7 = parseInt(audioSliderText3_V7.value);
+                                correspondingValueText3_V7.textContent = correspondingValuesText3_V7[selectedSampleText3_V7 - 1]; // Adjust index
+                                const audioFileNameText3_V7 = `./audio/hifigan_universal/pc0/text_3/sample_43/wav_files/alpha${correspondingValuesText3_V7[selectedSampleText3_V7 - 1]}.wav`;
+                                audioSourceText3_V7.src = audioFileNameText3_V7;
+                                audioPlayerText3_V7.load();
+                                audioPlayerText3_V7.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V15" name="audioSliderText3_V15" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V15">0</span></p>
+
+                        <audio id="audioPlayerText3_V15" controls>
+                            <source id="audioSourceText3_V15"
+                                src="./audio/hifigan_universal/pc0/text_3/sample_18/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V15 = document.getElementById("audioSliderText3_V15");
+                            const correspondingValueText3_V15 = document.getElementById("correspondingValueText3_V15");
+                            const audioPlayerText3_V15 = document.getElementById("audioPlayerText3_V15");
+                            const audioSourceText3_V15 = document.getElementById("audioSourceText3_V15");
+
+                            const correspondingValuesText3_V15 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText3_V15.addEventListener("input", () => {
+                                const selectedSampleText3_V15 = parseInt(audioSliderText3_V15.value);
+                                correspondingValueText3_V15.textContent = correspondingValuesText3_V15[selectedSampleText3_V15 - 1]; // Adjust index
+                                const audioFileNameText3_V15 = `./audio/hifigan_universal/pc0/text_3/sample_18/wav_files/alpha${correspondingValuesText3_V15[selectedSampleText3_V15 - 1]}.wav`;
+                                audioSourceText3_V15.src = audioFileNameText3_V15;
+                                audioPlayerText3_V15.load();
+                                audioPlayerText3_V15.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V8" name="audioSliderText3_V8" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V8">0</span></p>
+
+                        <audio id="audioPlayerText3_V8" controls>
+                            <source id="audioSourceText3_V8"
+                                src="./audio/hifigan_universal/pc0/text_3/sample_83/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V8 = document.getElementById("audioSliderText3_V8");
+                            const correspondingValueText3_V8 = document.getElementById("correspondingValueText3_V8");
+                            const audioPlayerText3_V8 = document.getElementById("audioPlayerText3_V8");
+                            const audioSourceText3_V8 = document.getElementById("audioSourceText3_V8");
+
+                            const correspondingValuesText3_V8 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText3_V8.addEventListener("input", () => {
+                                const selectedSampleText3_V8 = parseInt(audioSliderText3_V8.value);
+                                correspondingValueText3_V8.textContent = correspondingValuesText3_V8[selectedSampleText3_V8 - 1]; // Adjust index
+                                const audioFileNameText3_V8 = `./audio/hifigan_universal/pc0/text_3/sample_83/wav_files/alpha${correspondingValuesText3_V8[selectedSampleText3_V8 - 1]}.wav`;
+                                audioSourceText3_V8.src = audioFileNameText3_V8;
+                                audioPlayerText3_V8.load();
+                                audioPlayerText3_V8.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V16" name="audioSliderText3_V16" min="1" max="11"
+                            value="6">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V16">0</span></p>
+
+                        <audio id="audioPlayerText3_V16" controls>
+                            <source id="audioSourceText3_V16"
+                                src="./audio/hifigan_universal/pc0/text_3/sample_146/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V16 = document.getElementById("audioSliderText3_V16");
+                            const correspondingValueText3_V16 = document.getElementById("correspondingValueText3_V16");
+                            const audioPlayerText3_V16 = document.getElementById("audioPlayerText3_V16");
+                            const audioSourceText3_V16 = document.getElementById("audioSourceText3_V16");
+
+                            const correspondingValuesText3_V16 = ["-5", "-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3", "5"];
+
+                            audioSliderText3_V16.addEventListener("input", () => {
+                                const selectedSampleText3_V16 = parseInt(audioSliderText3_V16.value);
+                                correspondingValueText3_V16.textContent = correspondingValuesText3_V16[selectedSampleText3_V16 - 1]; // Adjust index
+                                const audioFileNameText3_V16 = `./audio/hifigan_universal/pc0/text_3/sample_146/wav_files/alpha${correspondingValuesText3_V16[selectedSampleText3_V16 - 1]}.wav`;
+                                audioSourceText3_V16.src = audioFileNameText3_V16;
+                                audioPlayerText3_V16.load();
+                                audioPlayerText3_V16.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
             </tbody>
         </table>
-        <h3>PC1 - Intensity and HNR editing</h3>
+        <div class="after-table-content">
+            <!-- Content after the table -->
+        </div>
+        <h3>PC2 - Intensity and HNR editing</h3>
         <p> * Note the speech enhancement when moving to the negative side of the scale (e.g. &lambda; = -2)</p>
         <table class="table table-responsive">
+            <thead>
+                <tr class="vertical edge text-center">
+                    <th colspan="1" style="text-align: center;">Input text</th>
+                    <th colspan="4" style="text-align: center;">Speech samples</th>
+                </tr>
+
+
+            </thead>
             <tbody>
                 <tr class="pure-table-odd">
-
+                    <!-- <td colspan="1" style="text-align: center" ; class="wider-cell">He hoped there would be stew for
+                        dinner, turnips and
+                        carrots and bruised potatoes and fat mutton
+                        pieces to be ladled out in thick peppered flour-fattened sauce. Stuff it into you, his belly
+                        counselled him.</td> -->
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>1</p>
+                    </td>
                     <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV9" name="audioSliderV9" min="1" max="9" value="5">
 
@@ -607,37 +1395,6 @@
                         </script>
                     </td>
                     <td class="vertical edge text-center">
-                        <input type="range" id="audioSliderV10" name="audioSliderV10" min="1" max="9" value="5">
-
-                        <p>&lambda; = <span id="correspondingValueV10">0</span></p>
-
-                        <audio id="audioPlayerV10" controls>
-                            <source id="audioSourceV10"
-                                src="./audio/hifigan_universal/pc1/sample_0/wav_files/alpha0.wav" type="audio/mpeg">
-                        </audio>
-
-                        <script>
-                            const audioSliderV10 = document.getElementById("audioSliderV10");
-                            const correspondingValueV10 = document.getElementById("correspondingValueV10");
-                            const audioPlayerV10 = document.getElementById("audioPlayerV10");
-                            const audioSourceV10 = document.getElementById("audioSourceV10");
-
-                            const correspondingValuesV10 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
-
-                            audioSliderV10.addEventListener("input", () => {
-                                const selectedSampleV10 = parseInt(audioSliderV10.value);
-                                correspondingValueV10.textContent = correspondingValuesV10[selectedSampleV10 - 1]; // Adjust index
-                                const audioFileNameV10 = `./audio/hifigan_universal/pc1/sample_0/wav_files/alpha${correspondingValuesV10[selectedSampleV10 - 1]}.wav`;
-                                audioSourceV10.src = audioFileNameV10;
-                                audioPlayerV10.load();
-                                audioPlayerV10.play();
-                            });
-                        </script>
-                    </td>
-                </tr>
-                <tr class="pure-table-odd">
-
-                    <td class="vertical edge text-center">
                         <input type="range" id="audioSliderV11" name="audioSliderV11" min="1" max="9" value="5">
 
                         <p>&lambda; = <span id="correspondingValueV11">0</span></p>
@@ -662,6 +1419,34 @@
                                 audioSourceV11.src = audioFileNameV11;
                                 audioPlayerV11.load();
                                 audioPlayerV11.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderV10" name="audioSliderV10" min="1" max="9" value="5">
+
+                        <p>&lambda; = <span id="correspondingValueV10">0</span></p>
+
+                        <audio id="audioPlayerV10" controls>
+                            <source id="audioSourceV10"
+                                src="./audio/hifigan_universal/pc1/sample_0/wav_files/alpha0.wav" type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderV10 = document.getElementById("audioSliderV10");
+                            const correspondingValueV10 = document.getElementById("correspondingValueV10");
+                            const audioPlayerV10 = document.getElementById("audioPlayerV10");
+                            const audioSourceV10 = document.getElementById("audioSourceV10");
+
+                            const correspondingValuesV10 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderV10.addEventListener("input", () => {
+                                const selectedSampleV10 = parseInt(audioSliderV10.value);
+                                correspondingValueV10.textContent = correspondingValuesV10[selectedSampleV10 - 1]; // Adjust index
+                                const audioFileNameV10 = `./audio/hifigan_universal/pc1/sample_0/wav_files/alpha${correspondingValuesV10[selectedSampleV10 - 1]}.wav`;
+                                audioSourceV10.src = audioFileNameV10;
+                                audioPlayerV10.load();
+                                audioPlayerV10.play();
                             });
                         </script>
                     </td>
@@ -694,8 +1479,261 @@
                         </script>
                     </td>
                 </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>2</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V9" name="audioSliderText2_V9" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V9">0</span></p>
+
+                        <audio id="audioPlayerText2_V9" controls>
+                            <source id="audioSourceText2_V9"
+                                src="./audio/hifigan_universal/pc1/text_2/sample_11/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V9 = document.getElementById("audioSliderText2_V9");
+                            const correspondingValueText2_V9 = document.getElementById("correspondingValueText2_V9");
+                            const audioPlayerText2_V9 = document.getElementById("audioPlayerText2_V9");
+                            const audioSourceText2_V9 = document.getElementById("audioSourceText2_V9");
+
+                            const correspondingValuesText2_V9 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V9.addEventListener("input", () => {
+                                const selectedSampleText2_V9 = parseInt(audioSliderText2_V9.value);
+                                correspondingValueText2_V9.textContent = correspondingValuesText2_V9[selectedSampleText2_V9 - 1]; // Adjust index
+                                const audioFileNameText2_V9 = `./audio/hifigan_universal/pc1/text_2/sample_11/wav_files/alpha${correspondingValuesText2_V9[selectedSampleText2_V9 - 1]}.wav`;
+                                audioSourceText2_V9.src = audioFileNameText2_V9;
+                                audioPlayerText2_V9.load();
+                                audioPlayerText2_V9.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V11" name="audioSliderText2_V11" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V11">0</span></p>
+
+                        <audio id="audioPlayerText2_V11" controls>
+                            <source id="audioSourceText2_V11"
+                                src="./audio/hifigan_universal/pc1/text_2/sample_139/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V11 = document.getElementById("audioSliderText2_V11");
+                            const correspondingValueText2_V11 = document.getElementById("correspondingValueText2_V11");
+                            const audioPlayerText2_V11 = document.getElementById("audioPlayerText2_V11");
+                            const audioSourceText2_V11 = document.getElementById("audioSourceText2_V11");
+
+                            const correspondingValuesText2_V11 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V11.addEventListener("input", () => {
+                                const selectedSampleText2_V11 = parseInt(audioSliderText2_V11.value);
+                                correspondingValueText2_V11.textContent = correspondingValuesText2_V11[selectedSampleText2_V11 - 1]; // Adjust index
+                                const audioFileNameText2_V11 = `./audio/hifigan_universal/pc1/text_2/sample_139/wav_files/alpha${correspondingValuesText2_V11[selectedSampleText2_V11 - 1]}.wav`;
+                                audioSourceText2_V11.src = audioFileNameText2_V11;
+                                audioPlayerText2_V11.load();
+                                audioPlayerText2_V11.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V10" name="audioSliderText2_V10" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V10">0</span></p>
+
+                        <audio id="audioPlayerText2_V10" controls>
+                            <source id="audioSourceText2_V10"
+                                src="./audio/hifigan_universal/pc1/text_2/sample_0/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V10 = document.getElementById("audioSliderText2_V10");
+                            const correspondingValueText2_V10 = document.getElementById("correspondingValueText2_V10");
+                            const audioPlayerText2_V10 = document.getElementById("audioPlayerText2_V10");
+                            const audioSourceText2_V10 = document.getElementById("audioSourceText2_V10");
+
+                            const correspondingValuesText2_V10 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V10.addEventListener("input", () => {
+                                const selectedSampleText2_V10 = parseInt(audioSliderText2_V10.value);
+                                correspondingValueText2_V10.textContent = correspondingValuesText2_V10[selectedSampleText2_V10 - 1]; // Adjust index
+                                const audioFileNameText2_V10 = `./audio/hifigan_universal/pc1/text_2/sample_0/wav_files/alpha${correspondingValuesText2_V10[selectedSampleText2_V10 - 1]}.wav`;
+                                audioSourceText2_V10.src = audioFileNameText2_V10;
+                                audioPlayerText2_V10.load();
+                                audioPlayerText2_V10.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText2_V12" name="audioSliderText2_V12" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText2_V12">0</span></p>
+
+                        <audio id="audioPlayerText2_V12" controls>
+                            <source id="audioSourceText2_V12"
+                                src="./audio/hifigan_universal/pc1/text_2/sample_130/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText2_V12 = document.getElementById("audioSliderText2_V12");
+                            const correspondingValueText2_V12 = document.getElementById("correspondingValueText2_V12");
+                            const audioPlayerText2_V12 = document.getElementById("audioPlayerText2_V12");
+                            const audioSourceText2_V12 = document.getElementById("audioSourceText2_V12");
+
+                            const correspondingValuesText2_V12 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText2_V12.addEventListener("input", () => {
+                                const selectedSampleText2_V12 = parseInt(audioSliderText2_V12.value);
+                                correspondingValueText2_V12.textContent = correspondingValuesText2_V12[selectedSampleText2_V12 - 1]; // Adjust index
+                                const audioFileNameText2_V12 = `./audio/hifigan_universal/pc1/text_2/sample_130/wav_files/alpha${correspondingValuesText2_V12[selectedSampleText2_V12 - 1]}.wav`;
+                                audioSourceText2_V12.src = audioFileNameText2_V12;
+                                audioPlayerText2_V12.load();
+                                audioPlayerText2_V12.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
+                <tr class="pure-table-odd">
+                    <td colspan="1" style="text-align: center" ; class="wider-cell">
+                        <p>3</p>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V9" name="audioSliderText3_V9" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V9">0</span></p>
+
+                        <audio id="audioPlayerText3_V9" controls>
+                            <source id="audioSourceText3_V9"
+                                src="./audio/hifigan_universal/pc1/text_3/sample_11/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V9 = document.getElementById("audioSliderText3_V9");
+                            const correspondingValueText3_V9 = document.getElementById("correspondingValueText3_V9");
+                            const audioPlayerText3_V9 = document.getElementById("audioPlayerText3_V9");
+                            const audioSourceText3_V9 = document.getElementById("audioSourceText3_V9");
+
+                            const correspondingValuesText3_V9 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V9.addEventListener("input", () => {
+                                const selectedSampleText3_V9 = parseInt(audioSliderText3_V9.value);
+                                correspondingValueText3_V9.textContent = correspondingValuesText3_V9[selectedSampleText3_V9 - 1]; // Adjust index
+                                const audioFileNameText3_V9 = `./audio/hifigan_universal/pc1/text_3/sample_11/wav_files/alpha${correspondingValuesText3_V9[selectedSampleText3_V9 - 1]}.wav`;
+                                audioSourceText3_V9.src = audioFileNameText3_V9;
+                                audioPlayerText3_V9.load();
+                                audioPlayerText3_V9.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V11" name="audioSliderText3_V11" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V11">0</span></p>
+
+                        <audio id="audioPlayerText3_V11" controls>
+                            <source id="audioSourceText3_V11"
+                                src="./audio/hifigan_universal/pc1/text_3/sample_139/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V11 = document.getElementById("audioSliderText3_V11");
+                            const correspondingValueText3_V11 = document.getElementById("correspondingValueText3_V11");
+                            const audioPlayerText3_V11 = document.getElementById("audioPlayerText3_V11");
+                            const audioSourceText3_V11 = document.getElementById("audioSourceText3_V11");
+
+                            const correspondingValuesText3_V11 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V11.addEventListener("input", () => {
+                                const selectedSampleText3_V11 = parseInt(audioSliderText3_V11.value);
+                                correspondingValueText3_V11.textContent = correspondingValuesText3_V11[selectedSampleText3_V11 - 1]; // Adjust index
+                                const audioFileNameText3_V11 = `./audio/hifigan_universal/pc1/text_3/sample_139/wav_files/alpha${correspondingValuesText3_V11[selectedSampleText3_V11 - 1]}.wav`;
+                                audioSourceText3_V11.src = audioFileNameText3_V11;
+                                audioPlayerText3_V11.load();
+                                audioPlayerText3_V11.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V10" name="audioSliderText3_V10" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V10">0</span></p>
+
+                        <audio id="audioPlayerText3_V10" controls>
+                            <source id="audioSourceText3_V10"
+                                src="./audio/hifigan_universal/pc1/text_3/sample_0/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V10 = document.getElementById("audioSliderText3_V10");
+                            const correspondingValueText3_V10 = document.getElementById("correspondingValueText3_V10");
+                            const audioPlayerText3_V10 = document.getElementById("audioPlayerText3_V10");
+                            const audioSourceText3_V10 = document.getElementById("audioSourceText3_V10");
+
+                            const correspondingValuesText3_V10 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V10.addEventListener("input", () => {
+                                const selectedSampleText3_V10 = parseInt(audioSliderText3_V10.value);
+                                correspondingValueText3_V10.textContent = correspondingValuesText3_V10[selectedSampleText3_V10 - 1]; // Adjust index
+                                const audioFileNameText3_V10 = `./audio/hifigan_universal/pc1/text_3/sample_0/wav_files/alpha${correspondingValuesText3_V10[selectedSampleText3_V10 - 1]}.wav`;
+                                audioSourceText3_V10.src = audioFileNameText3_V10;
+                                audioPlayerText3_V10.load();
+                                audioPlayerText3_V10.play();
+                            });
+                        </script>
+                    </td>
+                    <td class="vertical edge text-center">
+                        <input type="range" id="audioSliderText3_V12" name="audioSliderText3_V12" min="1" max="9"
+                            value="5">
+
+                        <p>&lambda; = <span id="correspondingValueText3_V12">0</span></p>
+
+                        <audio id="audioPlayerText3_V12" controls>
+                            <source id="audioSourceText3_V12"
+                                src="./audio/hifigan_universal/pc1/text_3/sample_130/wav_files/alpha0.wav"
+                                type="audio/mpeg">
+                        </audio>
+
+                        <script>
+                            const audioSliderText3_V12 = document.getElementById("audioSliderText3_V12");
+                            const correspondingValueText3_V12 = document.getElementById("correspondingValueText3_V12");
+                            const audioPlayerText3_V12 = document.getElementById("audioPlayerText3_V12");
+                            const audioSourceText3_V12 = document.getElementById("audioSourceText3_V12");
+
+                            const correspondingValuesText3_V12 = ["-3", "-2", "-1", "-0.5", "0", "0.5", "1", "2", "3"];
+
+                            audioSliderText3_V12.addEventListener("input", () => {
+                                const selectedSampleText3_V12 = parseInt(audioSliderText3_V12.value);
+                                correspondingValueText3_V12.textContent = correspondingValuesText3_V12[selectedSampleText3_V12 - 1]; // Adjust index
+                                const audioFileNameText3_V12 = `./audio/hifigan_universal/pc1/text_3/sample_130/wav_files/alpha${correspondingValuesText3_V12[selectedSampleText3_V12 - 1]}.wav`;
+                                audioSourceText3_V12.src = audioFileNameText3_V12;
+                                audioPlayerText3_V12.load();
+                                audioPlayerText3_V12.play();
+                            });
+                        </script>
+                    </td>
+                </tr>
             </tbody>
         </table>
+        <div class="after-table-content">
+            <!-- Content after the table -->
+        </div>
     </div>
 
 </body>
